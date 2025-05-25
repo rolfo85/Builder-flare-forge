@@ -66,7 +66,7 @@
     </div>
 
     <div
-      class="flex items-center flex-col font-normal justify-start min-h-[1200px] pointer-events-auto"
+      class="flex items-center flex-col font-normal justify-start min-h-[1200px] pointer-events-auto w-full"
     >
       <div
         class="bg-white font-normal overflow-x-hidden overflow-y-hidden w-full pointer-events-auto"
