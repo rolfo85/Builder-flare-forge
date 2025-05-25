@@ -25,7 +25,7 @@
             </svg>
           </button>
           <div
-            class="w-[150px] text-sm font-medium text-[#232043] md:text-base"
+            class="font-red-hat-text w-[150px] text-sm font-medium text-[#232043] md:text-base"
           >
             Customers
           </div>
@@ -33,7 +33,7 @@
         <div class="flex items-center justify-end gap-2">
           <button
             @click="saveForm"
-            class="flex h-10 items-center justify-center gap-2 rounded-md bg-[#815AF0] px-4 py-2 text-sm font-medium text-white sm:h-[40px] sm:px-4 sm:py-2"
+            class="flex h-10 items-center justify-center gap-2 rounded-[6px] bg-[#815AF0] px-4 py-2 text-sm font-medium text-white sm:h-[40px] sm:px-4 sm:py-2"
           >
             Save
           </button>
@@ -54,7 +54,9 @@
         >
           <!-- Item Details Section -->
           <div class="flex w-full flex-col items-start gap-4">
-            <div class="text-lg font-medium text-[#232043] sm:text-xl">
+            <div
+              class="font-red-hat-display text-lg font-medium text-[#232043] sm:text-xl"
+            >
               Item details
             </div>
 
@@ -62,7 +64,7 @@
             <div class="flex w-full flex-col items-start gap-4 sm:flex-row">
               <div
                 :class="[
-                  'flex h-[48px] flex-1 items-center justify-center gap-4 rounded-md border border-[#D7D5E4] bg-white p-3 sm:h-[56px] sm:p-4',
+                  'flex h-[48px] flex-1 items-center justify-center gap-4 rounded-[5px] border border-[#D7D5E4] bg-white p-3 sm:h-[56px] sm:p-4',
                   formData.itemType === 'product' ? 'border-[#815AF0]' : '',
                 ]"
                 @click="formData.itemType = 'product'"
@@ -70,7 +72,7 @@
                 <div class="flex items-center gap-2">
                   <div
                     :class="[
-                      'h-4 w-4 rounded-full border-2',
+                      'h-4 w-4 rounded-full border-[2px]',
                       formData.itemType === 'product'
                         ? 'border-[#815AF0] bg-[#815AF0]'
                         : 'border-[#B1AFC5]',
@@ -86,7 +88,7 @@
                 </div>
                 <div
                   :class="[
-                    'flex flex-1 flex-col items-start text-sm font-medium',
+                    'font-red-hat-text flex flex-1 flex-col items-start text-sm font-medium',
                     formData.itemType === 'product'
                       ? 'text-[#7552D0]'
                       : 'text-[#232043]',
@@ -98,7 +100,7 @@
 
               <div
                 :class="[
-                  'flex h-[48px] flex-1 items-center justify-center gap-4 rounded-md border border-[#D7D5E4] bg-white p-3 sm:h-[56px] sm:p-4',
+                  'flex h-[48px] flex-1 items-center justify-center gap-4 rounded-[5px] border border-[#D7D5E4] bg-white p-3 sm:h-[56px] sm:p-4',
                   formData.itemType === 'service' ? 'border-[#815AF0]' : '',
                 ]"
                 @click="formData.itemType = 'service'"
@@ -106,7 +108,7 @@
                 <div class="flex items-center gap-2">
                   <div
                     :class="[
-                      'h-4 w-4 rounded-full border-2',
+                      'h-4 w-4 rounded-full border-[2px]',
                       formData.itemType === 'service'
                         ? 'border-[#815AF0] bg-[#815AF0]'
                         : 'border-[#B1AFC5]',
@@ -122,7 +124,7 @@
                 </div>
                 <div
                   :class="[
-                    'flex flex-1 flex-col items-start text-sm font-medium',
+                    'font-red-hat-text flex flex-1 flex-col items-start text-sm font-medium',
                     formData.itemType === 'service'
                       ? 'text-[#7552D0]'
                       : 'text-[#232043]',
@@ -135,13 +137,14 @@
 
             <!-- Product Name -->
             <div class="flex w-full flex-col items-start gap-2">
-              <label class="text-sm font-medium text-[#232043]"
+              <label
+                class="font-red-hat-text text-sm font-medium text-[#232043]"
                 >Product name</label
               >
               <input
                 v-model="formData.productName"
                 type="text"
-                class="h-12 w-full rounded-md border border-[#D7D5E4] p-3 text-sm"
+                class="font-red-hat-text h-12 w-full rounded-[5px] border border-[#D7D5E4] p-3 text-sm"
                 placeholder="Enter product name"
               />
             </div>
@@ -151,7 +154,7 @@
               <div class="flex w-full flex-col gap-6 md:flex-row">
                 <div class="flex flex-1 flex-col items-start gap-2 md:w-1/2">
                   <label
-                    class="flex items-center gap-2 text-sm font-medium text-[#232043]"
+                    class="font-red-hat-text flex items-center gap-2 text-sm font-medium text-[#232043]"
                   >
                     Category
                   </label>
@@ -159,7 +162,7 @@
                     <input
                       v-model="formData.category"
                       type="text"
-                      class="h-12 w-full rounded-md border border-[#D7D5E4] p-3 text-sm text-[#6A6881]"
+                      class="font-red-hat-text h-12 w-full rounded-[5px] border border-[#D7D5E4] p-3 text-sm text-[#6A6881]"
                       placeholder="Search or add a new category"
                     />
                   </div>
@@ -167,7 +170,7 @@
 
                 <div class="flex flex-1 flex-col items-start gap-2 md:w-1/2">
                   <label
-                    class="flex items-center gap-2 text-sm font-medium text-[#232043]"
+                    class="font-red-hat-text flex items-center gap-2 text-sm font-medium text-[#232043]"
                   >
                     Brand
                   </label>
@@ -175,7 +178,7 @@
                     <input
                       v-model="formData.brand"
                       type="text"
-                      class="h-12 w-full rounded-md border border-[#D7D5E4] p-3 text-sm"
+                      class="font-red-hat-text h-12 w-full rounded-[5px] border border-[#D7D5E4] p-3 text-sm"
                       placeholder="Enter brand name"
                     />
                   </div>
@@ -187,10 +190,12 @@
           <!-- Inventory Section -->
           <div class="flex w-full flex-col items-start gap-4">
             <div class="flex w-full flex-col items-start gap-1">
-              <div class="text-lg font-medium text-[#232043] sm:text-xl">
+              <div
+                class="font-red-hat-display text-lg font-medium text-[#232043] sm:text-xl"
+              >
                 Inventory
               </div>
-              <div class="text-sm text-[#52506D]">
+              <div class="font-red-hat-text text-sm text-[#52506D]">
                 Add SKU, stock units to track inventory.
               </div>
             </div>
@@ -199,7 +204,7 @@
               <div class="flex w-full flex-col gap-6 md:flex-row">
                 <div class="flex flex-1 flex-col items-start gap-2 md:w-1/2">
                   <label
-                    class="flex items-center gap-2 text-sm font-medium text-[#232043]"
+                    class="font-red-hat-text flex items-center gap-2 text-sm font-medium text-[#232043]"
                   >
                     SKU
                   </label>
@@ -207,7 +212,7 @@
                     <input
                       v-model="formData.sku"
                       type="text"
-                      class="h-12 w-full rounded-md border border-[#D7D5E4] p-3 text-sm"
+                      class="font-red-hat-text h-12 w-full rounded-[5px] border border-[#D7D5E4] p-3 text-sm"
                       placeholder="Enter SKU"
                     />
                   </div>
@@ -215,7 +220,7 @@
 
                 <div class="flex flex-1 flex-col items-start gap-2 md:w-1/2">
                   <label
-                    class="flex items-center gap-2 text-sm font-medium text-[#232043]"
+                    class="font-red-hat-text flex items-center gap-2 text-sm font-medium text-[#232043]"
                   >
                     Barcode
                   </label>
@@ -223,7 +228,7 @@
                     <input
                       v-model="formData.barcode"
                       type="text"
-                      class="h-12 w-full rounded-md border border-[#D7D5E4] p-3 text-sm"
+                      class="font-red-hat-text h-12 w-full rounded-[5px] border border-[#D7D5E4] p-3 text-sm"
                       placeholder="Enter barcode"
                     />
                   </div>
@@ -235,7 +240,7 @@
             <div class="flex w-full items-center gap-2">
               <div
                 :class="[
-                  'flex h-4 w-4 cursor-pointer items-center justify-center rounded border-2',
+                  'flex h-4 w-4 cursor-pointer items-center justify-center rounded-[5px] border-[2px]',
                   formData.trackInventory
                     ? 'border-[#815AF0] bg-[#815AF0]'
                     : 'border-[#B1AFC5]',
@@ -260,7 +265,7 @@
                 </svg>
               </div>
               <label
-                class="cursor-pointer text-sm text-[#232043]"
+                class="font-red-hat-text cursor-pointer text-sm text-[#232043]"
                 @click="formData.trackInventory = !formData.trackInventory"
               >
                 Track inventory for this product.
@@ -271,10 +276,12 @@
           <!-- More Options Section -->
           <div class="flex w-full flex-col items-start gap-4">
             <div class="flex w-full flex-col items-start gap-1">
-              <div class="text-lg font-medium text-[#232043] sm:text-xl">
+              <div
+                class="font-red-hat-display text-lg font-medium text-[#232043] sm:text-xl"
+              >
                 More options
               </div>
-              <div class="text-sm text-[#232043]">
+              <div class="font-red-hat-text text-sm text-[#232043]">
                 Manage taxes, fees and shipping configurations.
               </div>
             </div>
@@ -283,7 +290,7 @@
             <div class="flex w-full flex-col items-start gap-6">
               <div class="flex h-[76px] w-full flex-col items-start gap-2">
                 <label
-                  class="flex items-center gap-2 text-sm font-medium text-[#232043]"
+                  class="font-red-hat-text flex items-center gap-2 text-sm font-medium text-[#232043]"
                 >
                   Tax exemption
                 </label>
@@ -291,7 +298,7 @@
                   <input
                     v-model="formData.taxExemption"
                     type="text"
-                    class="h-12 w-full rounded-md border border-[#D7D5E4] p-3 text-sm"
+                    class="font-red-hat-text h-12 w-full rounded-[5px] border border-[#D7D5E4] p-3 text-sm"
                     placeholder="Enter tax exemption"
                   />
                 </div>
@@ -302,7 +309,7 @@
             <div class="flex w-full items-center gap-2">
               <div
                 :class="[
-                  'flex h-4 w-4 cursor-pointer items-center justify-center rounded border-2',
+                  'flex h-4 w-4 cursor-pointer items-center justify-center rounded-[5px] border-[2px]',
                   formData.shippingExempt
                     ? 'border-[#815AF0] bg-[#815AF0]'
                     : 'border-[#B1AFC5]',
@@ -327,7 +334,7 @@
                 </svg>
               </div>
               <label
-                class="cursor-pointer text-sm text-[#232043]"
+                class="font-red-hat-text cursor-pointer text-sm text-[#232043]"
                 @click="formData.shippingExempt = !formData.shippingExempt"
               >
                 Exempt shipping fee on this item
@@ -344,41 +351,45 @@
         <div class="flex w-full flex-col items-start gap-6">
           <div class="flex w-full flex-col items-start gap-6">
             <div
-              class="w-full text-center text-xs font-medium uppercase tracking-[1.92px] text-[#3B3858]"
+              class="font-red-hat-text w-full text-center text-xs font-medium uppercase tracking-[1.92px] text-[#3B3858]"
             >
               ITEM SUMMARY
             </div>
 
             <!-- Item Summary Card -->
             <div
-              class="flex w-full flex-col items-center justify-center gap-6 rounded-lg bg-gradient-to-r from-[#FAEFFF] to-[#EFEFFF] p-6"
+              class="flex w-full flex-col items-center justify-center gap-6 rounded-[10px] bg-gradient-to-r from-[#FAEFFF] to-[#EFEFFF] p-6"
             >
               <div
                 class="flex w-[200px] flex-col items-center gap-2 sm:w-[200px]"
               >
                 <div class="flex items-start">
                   <div
-                    class="rounded-full bg-[#EEE7FF] px-4 py-1 text-xs font-medium text-[#7552D0]"
+                    class="font-red-hat-text rounded-[45px] bg-[#EEE7FF] px-4 py-1 text-xs font-medium text-[#7552D0]"
                   >
                     Selling price
                   </div>
                 </div>
                 <div
-                  class="w-full text-center text-2xl font-medium text-[#232043]"
+                  class="font-red-hat-display w-full text-center text-2xl font-medium text-[#232043]"
                 >
                   ${{ formatPrice(formData.sellingPrice) }}
                 </div>
               </div>
 
               <div
-                class="flex w-full items-center gap-4 rounded-md border border-[#F9F8FE] bg-white p-3 sm:p-4"
+                class="flex w-full items-center gap-4 rounded-[5px] border border-[#F9F8FE] bg-white p-3 sm:p-4"
               >
                 <div
-                  class="flex h-10 w-10 items-center justify-center rounded bg-[#815AF0]"
+                  class="flex h-10 w-10 items-center justify-center rounded-[5px] bg-[#815AF0]"
                 >
-                  <span class="text-sm font-medium text-white">PP</span>
+                  <span class="font-red-hat-text text-sm font-medium text-white"
+                    >PP</span
+                  >
                 </div>
-                <div class="flex-1 text-sm font-medium text-[#232043]">
+                <div
+                  class="font-red-hat-text flex-1 text-sm font-medium text-[#232043]"
+                >
                   {{ formData.productName || "Premium paw dog food" }}
                 </div>
               </div>
@@ -389,11 +400,13 @@
               <div
                 class="flex w-full flex-col gap-2 sm:flex-row sm:items-center"
               >
-                <div class="w-[150px] text-sm font-medium text-[#3B3858]">
+                <div
+                  class="font-red-hat-text w-[150px] text-sm font-medium text-[#3B3858]"
+                >
                   Description
                 </div>
                 <div
-                  class="flex-1 overflow-hidden text-ellipsis text-left text-sm text-[#232043] sm:text-right"
+                  class="font-red-hat-text flex-1 overflow-hidden text-ellipsis text-left text-sm text-[#232043] sm:text-right"
                 >
                   {{
                     formData.description ||
@@ -410,11 +423,13 @@
               <div
                 class="flex w-full flex-col gap-2 sm:flex-row sm:items-center"
               >
-                <div class="w-[150px] text-sm font-medium text-[#232043]">
+                <div
+                  class="font-red-hat-text w-[150px] text-sm font-medium text-[#232043]"
+                >
                   Category
                 </div>
                 <div
-                  class="flex-1 overflow-hidden text-ellipsis text-left text-sm text-[#232043] sm:text-right"
+                  class="font-red-hat-text flex-1 overflow-hidden text-ellipsis text-left text-sm text-[#232043] sm:text-right"
                 >
                   {{ formData.category || "Dog food" }}
                 </div>
@@ -424,11 +439,13 @@
               <div
                 class="flex w-full flex-col gap-2 sm:flex-row sm:items-center"
               >
-                <div class="w-[150px] text-sm font-medium text-[#232043]">
+                <div
+                  class="font-red-hat-text w-[150px] text-sm font-medium text-[#232043]"
+                >
                   Brand name
                 </div>
                 <div
-                  class="flex-1 overflow-hidden text-ellipsis text-left text-sm text-[#232043] sm:text-right"
+                  class="font-red-hat-text flex-1 overflow-hidden text-ellipsis text-left text-sm text-[#232043] sm:text-right"
                 >
                   {{ formData.brand || "Premium paws" }}
                 </div>
@@ -473,12 +490,14 @@
                       fill="#232043"
                     />
                   </svg>
-                  <div class="w-[150px] text-sm font-medium text-[#232043]">
+                  <div
+                    class="font-red-hat-text w-[150px] text-sm font-medium text-[#232043]"
+                  >
                     Taxes
                   </div>
                 </div>
                 <div
-                  class="flex-1 overflow-hidden text-ellipsis text-left text-sm text-[#232043] sm:text-right"
+                  class="font-red-hat-text flex-1 overflow-hidden text-ellipsis text-left text-sm text-[#232043] sm:text-right"
                 >
                   {{
                     formData.taxExemption
@@ -493,27 +512,33 @@
 
         <!-- Availability Toggle -->
         <div
-          class="flex w-full flex-col items-start gap-6 rounded-md border border-[#D7D5E4] p-4"
+          class="flex w-full flex-col items-start gap-6 rounded-[5px] border border-[#D7D5E4] p-4"
         >
           <div class="flex w-full flex-col items-start gap-2">
             <div
               class="flex w-full flex-col items-start justify-between gap-3 sm:flex-row sm:items-center"
             >
-              <div class="text-lg font-medium text-[#232043]">Availability</div>
-              <button
-                class="relative h-5 w-8 cursor-pointer rounded-full transition-colors duration-200 ease-in-out"
-                :class="formData.available ? 'bg-[#815AF0]' : 'bg-gray-300'"
-                @click="formData.available = !formData.available"
+              <div
+                class="font-red-hat-display text-lg font-medium text-[#232043]"
               >
-                <span
-                  class="absolute left-0 top-0 h-5 w-5 transform rounded-full bg-white shadow-md transition-transform duration-200 ease-in-out"
+                Availability
+              </div>
+              <div class="relative h-5 w-8 cursor-pointer">
+                <div
+                  class="absolute h-5 w-8 rounded-full transition-colors duration-200 ease-in-out"
+                  :class="formData.available ? 'bg-[#815AF0]' : 'bg-gray-300'"
+                  @click="formData.available = !formData.available"
+                ></div>
+                <div
+                  class="absolute top-0 h-5 w-5 transform rounded-full bg-white shadow-md transition-transform duration-200 ease-in-out"
                   :class="
                     formData.available ? 'translate-x-3' : 'translate-x-0'
                   "
-                ></span>
-              </button>
+                  @click="formData.available = !formData.available"
+                ></div>
+              </div>
             </div>
-            <div class="text-sm text-[#52506D]">
+            <div class="font-red-hat-text text-sm text-[#52506D]">
               Item available. Disable the toggle when the item is unavailable or
               out of stock.
             </div>
@@ -578,7 +603,7 @@ const onBack = () => {
 @import url("https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500&family=Red+Hat+Text:wght@400;500&display=swap");
 
-.red-hat-text {
+.font-red-hat-text {
   font-family:
     "Red Hat Text",
     -apple-system,
@@ -587,12 +612,50 @@ const onBack = () => {
     sans-serif;
 }
 
-.red-hat-display {
+.font-red-hat-display {
   font-family:
     "Red Hat Display",
     -apple-system,
     Roboto,
     Helvetica,
     sans-serif;
+}
+
+/* Custom styles to match the original design */
+body {
+  background-color: #f9fafb;
+}
+
+/* Making border radius consistent with the design */
+input,
+button,
+.rounded-\[5px\] {
+  border-radius: 5px;
+}
+
+/* Custom toggle switch styling */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 32px;
+  height: 20px;
+}
+
+/* Fixing specific colors */
+.bg-\[\#815AF0\] {
+  background-color: #815af0;
+}
+
+.text-\[\#232043\] {
+  color: #232043;
+}
+
+.border-\[\#D7D5E4\] {
+  border-color: #d7d5e4;
+}
+
+/* Add more precise gradient for the summary card */
+.from-\[\#FAEFFF\].to-\[\#EFEFFF\] {
+  background: linear-gradient(122deg, #faefff 21.38%, #efefff 69.42%);
 }
 </style>

@@ -1,0 +1,68 @@
+/* This file contains additional Tailwind utilities to match the original design */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .toggle-switch-thumb {
+    @apply absolute left-0 top-0 h-5 w-5 transform rounded-full bg-white shadow-md transition-transform duration-200 ease-in-out;
+  }
+
+  .toggle-switch-track {
+    @apply absolute h-5 w-8 rounded-full transition-colors duration-200 ease-in-out;
+  }
+
+  .toggle-switch-thumb-active {
+    @apply translate-x-3;
+  }
+
+  .toggle-switch-thumb-inactive {
+    @apply translate-x-0;
+  }
+
+  .toggle-switch-track-active {
+    @apply bg-[#815AF0];
+  }
+
+  .toggle-switch-track-inactive {
+    @apply bg-gray-300;
+  }
+}
+
+/* Red Hat fonts */
+.font-red-hat-text {
+  font-family:
+    "Red Hat Text",
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+}
+
+.font-red-hat-display {
+  font-family:
+    "Red Hat Display",
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+}
+
+/* Specific border-radius values */
+.rounded-5 {
+  border-radius: 5px;
+}
+
+.rounded-10 {
+  border-radius: 10px;
+}
+
+.rounded-45 {
+  border-radius: 45px;
+}
+
+/* Specific gradient for the summary card */
+.bg-summary-gradient {
+  background: linear-gradient(122deg, #faefff 21.38%, #efefff 69.42%);
+}

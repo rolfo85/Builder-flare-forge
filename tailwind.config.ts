@@ -6,7 +6,7 @@ export default {
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx,vue}",
   ],
   prefix: "",
   theme: {
@@ -62,11 +62,44 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Custom colors to match the design
+        purple: {
+          primary: "#815AF0",
+          secondary: "#7552D0",
+          light: "#EEE7FF",
+        },
+        gray: {
+          custom: "#D7D5E4",
+          light: "#F9F8FE",
+          dark: "#232043",
+          text: "#6A6881",
+          muted: "#52506D",
+          label: "#3B3858",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+        "5": "5px",
+        "10": "10px",
+        "45": "45px",
+      },
+      fontFamily: {
+        "red-hat-text": [
+          "Red Hat Text",
+          "-apple-system",
+          "Roboto",
+          "Helvetica",
+          "sans-serif",
+        ],
+        "red-hat-display": [
+          "Red Hat Display",
+          "-apple-system",
+          "Roboto",
+          "Helvetica",
+          "sans-serif",
+        ],
       },
       keyframes: {
         "accordion-down": {
@@ -89,6 +122,10 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      backgroundImage: {
+        "summary-gradient":
+          "linear-gradient(122deg, #FAEFFF 21.38%, #EFEFFF 69.42%)",
       },
     },
   },

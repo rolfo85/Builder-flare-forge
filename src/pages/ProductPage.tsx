@@ -2,12 +2,27 @@ import React, { useEffect, useRef } from "react";
 import { createApp } from "vue";
 import ProductForm from "../vue-components/ProductForm.vue";
 import type { ProductFormData } from "../vue-components/types";
+import "../vue-components/ProductForm.vue"; // Import Vue component CSS
 
 const ProductPage: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const vueApp = useRef<any>(null);
 
   useEffect(() => {
+    // Load the required fonts
+    const redHatLink = document.createElement("link");
+    redHatLink.rel = "stylesheet";
+    redHatLink.href =
+      "https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500&family=Red+Hat+Text:wght@400;500&display=swap";
+    document.head.appendChild(redHatLink);
+
+    // Load Tabler icons
+    const tablerIconsLink = document.createElement("link");
+    tablerIconsLink.rel = "stylesheet";
+    tablerIconsLink.href =
+      "https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css";
+    document.head.appendChild(tablerIconsLink);
+
     if (containerRef.current) {
       // Clean up previous Vue app instance if it exists
       if (vueApp.current) {
@@ -48,11 +63,14 @@ const ProductPage: React.FC = () => {
       if (vueApp.current) {
         vueApp.current.unmount();
       }
+      // Clean up the links
+      document.head.removeChild(redHatLink);
+      document.head.removeChild(tablerIconsLink);
     };
   }, []);
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-gray-50">
+    <div className="flex min-h-screen flex-col items-center justify-center bg-[#F9FAFB]">
       <div
         ref={containerRef}
         className="w-full max-w-[1440px] overflow-hidden bg-white shadow-lg"
